@@ -1,0 +1,52 @@
+body {
+    padding: 50px;
+    font-family: "Cookie", Cookie, serif;
+    background: #FCFBBB;
+    color: #703607;
+}
+
+p {
+    font-size: 30px;
+}
+
+#layout {
+    padding: 0;
+    list-style-type: none;
+}
+
+#layout > li {
+    display: inline-block;
+}
+
+#first-col {
+    padding-right: 30px;
+}
+
+#home {
+    margin: 0;
+    background-color: #FF94A0;
+    padding: 45px 35px;
+    display: inline-block;
+}
+
+#nav {
+    padding: 20px 0 0 0;
+    /*padding-top: 20px;*/
+    list-style-type: none;
+}
+
+#nav > li {
+    margin: 10px 0;
+}
+
+#nav > li > a {
+    padding: 5px;
+    text-decoration: none;
+    color: #703607;
+    font-size: 35px;
+
+}
+
+#nav > li > a:hover {
+    background-color: #FF94A0;
+}
