@@ -1,0 +1,46 @@
+#logo {
+    width: 50%;
+    padding-left: 25%;
+}
+
+#welcome {
+    margin: 30px 0 0 0;
+    font-size: 50px;
+    text-align: center;
+}
+
+#secondCell {
+    width: 55% !important;
+}
+/*#thirdCell {*/
+/*width: 20%;*/
+
+/*}*/
+
+table, th, td {
+    margin: 0;
+    /*border: 1px solid black;*/
+}
+
+#pictures {
+    padding: 0;
+    width: 20%;
+}
+
+#slideshow {
+    border-radius: 8px;
+    background-color: #000000;
+    width: 540px;
+    height: 304px;
+}
+
+.slideshow_img{
+    margin: 5px 0;
+}
+
+#staticImg {
+    float: right;
+    padding-top: 15px;
+    height: 270px;
+    width: 465px;
+}

@@ -1,14 +1,32 @@
 extends layout
 
+block head
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    script(type='text/javascript', src='/javascripts/index.js')
+
 block content
-    ul#layout
-        li.cell
-            div#firstCol
+    table(onload='make()')#layout
+        td#firstCell
                 p#home Home
                 ul#nav
                     for page in pages
                         li
                             a.pageLink(href = page[1])= page[0]
-        li.cell
-            div#secondCol
-                p Welcome to #{title}
+        td#secondCell
+                img(src='/images/logo.jpg')#logo
+                p#welcome Welcome to #{title}
+        td#thirdCell
+            table#pictures
+                tr
+                    td
+                        div#slideshow
+                            for image in slideshowImages
+                                div.slideshow_div(align = 'center')
+                                    img.slideshow_img(src='images/slideshow/' + image)
+                                //-'<div align="center" class="slideshow_div"><img class="slideshow_img" src="images/slideshow/' + files[i] + '"></div>';
+                tr
+                    td
+                        img(src='images/static1.jpg')#staticImg
+                tr
+                    td
+                        img(src='images/static2.jpg')#staticImg
