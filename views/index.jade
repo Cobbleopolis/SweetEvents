@@ -3,12 +3,12 @@ extends layout
 block content
     ul#layout
         li.cell
-            div#first-col
+            div#firstCol
                 p#home Home
                 ul#nav
                     for page in pages
                         li
                             a.pageLink(href = page[1])= page[0]
         li.cell
-            div
+            div#secondCol
                 p Welcome to #{title}
