@@ -1,0 +1,39 @@
+/*table, th, td {*/
+/*margin: 0;*/
+/*border: 1px solid black;*/
+/*}*/
+
+.sectionName {
+    font-size: 25px;
+}
+
+.header, .footer {
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.sectionTable {
+    font-size: 18px;
+    margin-left: 40px;
+    border-collapse: collapse;
+    /*border-radius: 8px;*/
+    /*border: 1px solid #333333;*/
+    /*border: 1px solid #000000;*/
+}
+
+.sectionTable th tr td {
+    border: 1px solid #7C7D7F;
+}
+
+tr.sectionRow {
+    border: 1px #7C7D7F solid;
+}
+
+.sectionRowDark {
+    background: #E0E1E5;
+    border: 1px #7C7D7F solid;
+}
+
+.itemName {
+    padding-right: 20px;
+}

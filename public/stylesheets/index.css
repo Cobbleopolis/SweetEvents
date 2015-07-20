@@ -17,11 +17,6 @@
 
 /*}*/
 
-table, th, td {
-    margin: 0;
-    /*border: 1px solid black;*/
-}
-
 #pictures {
     padding: 0;
     width: 20%;
@@ -29,7 +24,9 @@ table, th, td {
 
 #slideshow {
     border-radius: 8px;
-    background-color: #8CCC52;
+    border: solid #333333;
+    /*border-color: #333333;*/
+    background-color: #333333;
     width: 540px;
     height: 304px;
 }
@@ -40,7 +37,10 @@ table, th, td {
 
 #staticImg {
     float: right;
-    padding-top: 15px;
+    padding: 0;
+    /*border: solid #333333;*/
+    margin-top: 10px;
+    border-radius: 8px;
     height: 270px;
     width: 465px;
 }

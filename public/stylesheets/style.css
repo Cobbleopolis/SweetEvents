@@ -1,13 +1,20 @@
+/*table, th, td {*/
+/*margin: 0;*/
+/*border: 1px solid black;*/
+/*}*/
+
 body {
     padding: 50px;
-    font-family: "Cookie", Cookie, serif;
-    background: #FCFBBB;
-    color: #703607;
+    font-family: "Courgette", Courgette, serif;
+    /*background: rgba(252, 251, 187, .8);*/
+    background: #F9F9FF;
+    font-size: 12px;
+    color: #000000;
 }
 
-p {
-    font-size: 30px;
-}
+/*p {*/
+/*font-size: 25px;*/
+/*}*/
 
 #layout {
     padding: 0;
@@ -18,7 +25,7 @@ p {
 
 #firstCell {
     vertical-align: top;
-    width: 13%;
+    width: 15%;
     padding-right: 40px;
 }
 
@@ -26,15 +33,17 @@ p {
     width: 100%;
 }
 
-#home {
+#active {
     margin: 0;
-    background-color: #FF94A0;
-    padding: 45px 35px;
+    /*background-color: #FF94A0;*/
+    background-color: #c4c4c4;
+    border-radius: 10px;
+    padding: 45px 35px !important;
     display: inline-block;
 }
 
 #nav {
-    padding: 20px 0 0 0;
+    padding: 0;
     /*padding-top: 20px;*/
     list-style-type: none;
 }
@@ -46,10 +55,12 @@ p {
 #nav > li > a {
     padding: 5px;
     text-decoration: none;
-    color: #703607;
-    font-size: 35px;
+    color: #000000;
+    font-size: 30px;
 }
 
 #nav > li > a:hover {
-    background-color: #FF94A0;
+    /*background-color: #FF94A0;*/
+    background-color: #c4c4c4;
+    border-radius: 10px;
 }

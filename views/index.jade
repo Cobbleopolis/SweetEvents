@@ -7,11 +7,10 @@ block head
 block content
     table(onload='make()')#layout
         td#firstCell
-                p#home Home
                 ul#nav
                     for page in pages
                         li
-                            a.pageLink(href = page[1])= page[0]
+                            a.pageLink(href = page[1] id= page[2] ? "active" : "")= page[0]
         td#secondCell
                 img(src='/images/logo.jpg')#logo
                 p#welcome Welcome to #{title}

@@ -1,10 +1,12 @@
+$('#slideshow').children().hide();
+
 function make() {
     $('.slideshow_img').attr( 'height', $('#slideshow').height() - 10);
     activateSlideshow();
 }
 
 var animTime = 500;
-var slideDurration = 4000;
+var slideDuration = 4000;
 
 function activateSlideshow() {
     $(function() {
@@ -14,7 +16,7 @@ function activateSlideshow() {
             slideshow.find('> div:first').fadeOut(animTime);
             slideshow.find('> div:first').next().delay(animTime).fadeIn(animTime);
             slideshow.find('> div:first').appendTo("#slideshow");
-        }, slideDurration);
+        }, slideDuration);
     });
 
 }
