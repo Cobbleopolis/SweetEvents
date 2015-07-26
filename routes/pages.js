@@ -12,11 +12,11 @@ router.get('/', function (req, res, next) {
                 title: 'Sweet Events - In Development',
                 pages: [
                     ['Home', '/', true],
-                    ['Sweets Creator', '/creator', false],
+                    //['Sweets Creator', '/creator', false],
                     ['Cakes', '/cakes', false],
                     ['Flavors', '/flavors', false],
                     ['Pricing', '/pricing', false],
-                    ['Questions', '/questions', false],
+                    //['Questions', '/questions', false],
                     ['Facebook', "/", false],
                     ['Contact Us', '/contact', false]
                 ],
@@ -33,11 +33,11 @@ router.get('/flavors', function (req, res, next) {
             title: 'Sweet Events - Flavors',
             pages: [
                 ['Home', '/', false],
-                ['Sweets Creator', '/creator', false],
+                //['Sweets Creator', '/creator', false],
                 ['Cakes', '/cakes', false],
                 ['Flavors', '/flavors', true],
                 ['Pricing', '/pricing', false],
-                ['Questions', '/questions', false],
+                //['Questions', '/questions', false],
                 ['Facebook', "/", false],
                 ['Contact Us', '/contact', false]
             ],

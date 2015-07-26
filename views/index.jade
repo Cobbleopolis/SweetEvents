@@ -5,26 +5,21 @@ block head
     script(type='text/javascript', src='/javascripts/index.js')
 
 block content
-    table(onload='make()')#layout
-        td#firstCell
-                ul#nav
-                    for page in pages
-                        li
-                            a.pageLink(href = page[1] id= page[2] ? "active" : "")= page[0]
-        td#secondCell
-                img(src='/images/logo.jpg')#logo
-                p#welcome Welcome to #{title}
-        td#thirdCell
-            table#pictures
-                tr
-                    td
-                        div#slideshow
-                            for image in slideshowImages
-                                div.slideshow_div(align = 'center')
-                                    img.slideshow_img(src='images/slideshow/' + image)
-                tr
-                    td
-                        img(src='images/static1.jpg')#staticImg
-                tr
-                    td
-                        img(src='images/static2.jpg')#staticImg
+    //table(onload='make()')#layout
+    //    td#secondCell
+    //            img(src='/images/logo.jpg')#logo
+    //            p#welcome Welcome to #{title}
+    //    td#thirdCell
+    //        table#pictures
+    //            tr
+    //                td
+    //                    div#slideshow
+    //                        for image in slideshowImages
+    //                            div.slideshow_div(align = 'center')
+    //                                img.slideshow_img(src='images/slideshow/' + image)
+    //            tr
+    //                td
+    //                    img(src='images/static1.jpg')#staticImg
+    //            tr
+    //                td
+    //                    img(src='images/static2.jpg')#staticImg

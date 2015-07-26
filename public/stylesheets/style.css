@@ -3,64 +3,128 @@
 /*border: 1px solid black;*/
 /*}*/
 
-body {
-    padding: 50px;
+html, body {
+    padding: 0;
     font-family: "Courgette", Courgette, serif;
     /*background: rgba(252, 251, 187, .8);*/
-    background: #F9F9FF;
+    background: #A4FF72;
     font-size: 12px;
     color: #000000;
-}
-
-/*p {*/
-/*font-size: 25px;*/
-/*}*/
-
-#layout {
-    padding: 0;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-#firstCell {
-    vertical-align: top;
-    width: 15%;
-    padding-right: 40px;
-}
-
-#secondCell {
-    width: 100%;
-}
-
-#active {
+    height: 100%;
+    /*width: 100%;*/
     margin: 0;
-    /*background-color: #FF94A0;*/
-    background-color: #c4c4c4;
-    border-radius: 10px;
-    padding: 45px 35px !important;
-    display: inline-block;
+}
+
+#page {
+    height: 100%;
+}
+
+#content {
+    float: right;
+}
+
+#navDiv {
+    float: left;
+    width: 12%;
+    height: 100%;
+    background-color: #76D464;
 }
 
 #nav {
-    padding: 0;
-    /*padding-top: 20px;*/
     list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin-top: 30px;
+}
+
+#nav > li:first-child > a > div {
+    border-top: solid 1px #3D7B3D;
 }
 
 #nav > li {
-    margin: 20px 0;
+    /*margin-bottom: 10px !important;*/
+}
+
+#nav > li > a > div {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: solid 1px #3D7B3D;
+    background: inherit;
+}
+
+#active {
+    background: #5AAE57 !important;
 }
 
 #nav > li > a {
-    padding: 5px;
     text-decoration: none;
     color: #000000;
     font-size: 30px;
 }
 
 #nav > li > a:hover {
-    /*background-color: #FF94A0;*/
-    background-color: #c4c4c4;
-    border-radius: 10px;
+    background: #62BD5F;
 }
+
+#nav > li > div {
+    font-size: 30px;
+    padding: 20px;
+    border-bottom: solid 1px #3d7b3d;
+}
+
+#clearingdiv {
+    clear: both;
+}
+
+/*p {*/
+/*font-size: 25px;*/
+/*}*/
+
+/*#layout {*/
+/*padding: 0;*/
+/*position: absolute;*/
+/*top: 20px;*/
+/*left: 20px;*/
+/*}*/
+
+/*#firstCell {*/
+/*vertical-align: top;*/
+/*width: 15%;*/
+/*padding-right: 40px;*/
+/*}*/
+
+/*#secondCell {*/
+/*width: 100%;*/
+/*}*/
+
+/*#active {*/
+/*margin: 0;*/
+/*/!*background-color: #FF94A0;*!/*/
+/*background-color: #c4c4c4;*/
+/*border-radius: 10px;*/
+/*padding: 45px 35px !important;*/
+/*display: inline-block;*/
+/*}*/
+
+/*#nav {*/
+/*padding: 0;*/
+/*/!*padding-top: 20px;*!/*/
+/*list-style-type: none;*/
+/*}*/
+
+/*#nav > li {*/
+/*margin: 20px 0;*/
+/*}*/
+
+/*#nav > li > a {*/
+/*padding: 5px;*/
+/*text-decoration: none;*/
+/*color: #000000;*/
+/*font-size: 30px;*/
+/*}*/
+
+/*#nav > li > a:hover {*/
+/*/!*background-color: #FF94A0;*!/*/
+/*background-color: #c4c4c4;*/
+/*border-radius: 10px;*/
+/*}*/

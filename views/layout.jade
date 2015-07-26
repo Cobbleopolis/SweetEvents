@@ -11,4 +11,12 @@ html
         link(rel='stylesheet', href='/stylesheets/style.css')
         block head
     body(onload='make()')
-        block content
+        div#page
+            div#navDiv
+                ul#nav
+                    for page in pages
+                        li
+                            a.pageLink(href = page[1])
+                                div(id= page[2] ? "active" : "")= page[0]
+            div#content
+                block content
