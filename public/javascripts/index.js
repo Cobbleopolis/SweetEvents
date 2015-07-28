@@ -1,28 +1,25 @@
 $('#slideshow').children().hide();
 
-$(document).ready(function () {
-    $('.slideshow_img').attr('height', $('#slideshow').height() - 10);
-    activateSlideshow();
-});
-
 function make() {
-    //$('.slideshow_img').attr('height', $('#slideshow').height() - 10);
-    //activateSlideshow();
-
-
-    //$.ajax({
-    //    type: 'POST',
-    //    url: 'http://localhost:1111/user/create',
-    //    data: {data},
-    //    dataType: 'application/json',
-    //    success: function(data) {
-    //        console.log('success');
-    //        console.log(data);
-    //        activateSlideshow();
-    //    }
-    //});
-
 }
+
+$(window).load(function () {
+    $.ajax({
+        type: 'GET',
+        url: '/post/index/getSlideshow'
+    }).done(function (data) {
+        console.log(data);
+        var html = '';
+        var slideshow = $("#slideshow");
+        for (var i in data) {
+            html += '<div class="slideshow_div" align="center"><img class="slideshow_img" src="images/slideshow/' + data[i] + '"></div>';
+            console.log(i);
+        }
+        slideshow.html(html);
+        $('.slideshow_img').attr('height', slideshow.height() - 10);
+        activateSlideshow();
+    });
+});
 
 var animTime = 500;
 var slideDuration = 4000;
