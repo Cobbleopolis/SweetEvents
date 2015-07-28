@@ -13,7 +13,6 @@ $(window).load(function () {
         var slideshow = $("#slideshow");
         for (var i in data) {
             html += '<div class="slideshow_div" align="center"><img class="slideshow_img" src="images/slideshow/' + data[i] + '"></div>';
-            console.log(i);
         }
         slideshow.html(html);
         $('.slideshow_img').attr('height', slideshow.height() - 10);
