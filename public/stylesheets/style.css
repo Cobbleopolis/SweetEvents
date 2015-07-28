@@ -15,14 +15,17 @@ html, body {
 }
 
 #content {
-    float: right;
+    /*float: left;*/
+    width: auto;
+    overflow: hidden
 }
 
 #navDiv {
     float: left;
-    width: 12%;
+    width: 10%;
     height: 100%;
     background-color: #76D464;
+    border-right: solid 1px #3d7b3d;
 }
 
 #nav {
@@ -67,9 +70,15 @@ html, body {
     border-bottom: solid 1px #3d7b3d;
 }
 
-#clearingdiv {
-    clear: both;
-}
+/*#title {*/
+/*width: 100%;*/
+/*text-align: center;*/
+/*font-size: 35px;*/
+/*background-color: #76D464;*/
+/*margin: 0;*/
+/*padding: 15px 0;*/
+/*border-bottom: solid 1px #3d7b3d;*/
+/*}*/
 
 /*p {*/
 /*font-size: 25px;*/

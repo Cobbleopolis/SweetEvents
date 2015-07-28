@@ -31,6 +31,7 @@ router.get('/flavors', function (req, res, next) {
     //console.log(flavors[5]);
     res.render('flavors', {
             title: 'Sweet Events - Flavors',
+            headder: "Flavors",
             pages: [
                 ['Home', '/', false],
                 //['Sweets Creator', '/creator', false],
