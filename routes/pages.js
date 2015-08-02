@@ -25,11 +25,10 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/cakes', function (req, res, next) {
-    var flavors = xlsx.parse(__dirname + '/../public/flavors.xlsx'); // parses a file
     //console.log(flavors[5]);
     res.render('cakes', {
-            title: 'Pricing',
-            active: 'Pricing',
+            title: 'Cakes',
+            active: 'Cakes',
             pages: pages
         }
     )
@@ -48,7 +47,6 @@ router.get('/flavors', function (req, res, next) {
 });
 
 router.get('/contact', function (req, res, next) {
-    var flavors = xlsx.parse(__dirname + '/../public/flavors.xlsx'); // parses a file
     //console.log(flavors[5]);
     res.render('contact', {
             title: 'Contact',
@@ -59,7 +57,6 @@ router.get('/contact', function (req, res, next) {
 });
 
 router.get('/pricing', function (req, res, next) {
-    var flavors = xlsx.parse(__dirname + '/../public/flavors.xlsx'); // parses a file
     //console.log(flavors[5]);
     res.render('pricing', {
             title: 'Pricing',
