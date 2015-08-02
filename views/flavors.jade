@@ -5,3 +5,16 @@ block head
     script(type='text/javascript', src='/javascripts/flavors.js')
 
 block content
+    div#display
+        each val in flavors
+            div.section
+                p.sectionName= val.name
+                p.header= val.data[0][0]
+                table
+                    -for(var i = 1; i < val.data.length; i++) {
+                        tr
+                            td=val.data[i][0]
+                            if(val.data[i][1])
+                                td=val.data[i][1]
+                    -}
+                p.footer= val.data[0][1]

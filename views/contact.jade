@@ -7,7 +7,7 @@ block content
     each val in contactUs
         -var size = val.data[0].length;
         if(contactUs.length > 1)
-            h2.tableName= val.name
+            p.tableName= val.name
         table
             each entry, row in val.data
                 tr

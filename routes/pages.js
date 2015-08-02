@@ -41,7 +41,8 @@ router.get('/flavors', function (req, res, next) {
             active: 'Flavors',
             flavors: flavors
         }
-    )
+    );
+    //console.log(flavors);
 });
 
 router.get('/pricing', function (req, res, next) {
@@ -62,7 +63,7 @@ router.get('/contact', function (req, res, next) {
             contactUs: contactUs
         }
     );
-    console.log(contactUs)
+    //console.log(contactUs)
 });
 
 module.exports = router;

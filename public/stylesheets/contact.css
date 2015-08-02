@@ -8,11 +8,6 @@
     font-size: 30px;
 }
 
-table, th, td {
-    border-left: 1px solid #3D7B3D;
-    border-collapse: collapse;
-}
-
 th, td {
     height: 45px;
 }
@@ -38,4 +33,9 @@ table {
     margin: 0 10%;
     font-size: 15px;
     border: 1px solid #3D7B3D;
+}
+
+table, th, td {
+    border-left: 1px solid #3D7B3D;
+    border-collapse: collapse;
 }

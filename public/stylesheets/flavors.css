@@ -1,12 +1,17 @@
-
-
 .sectionName {
     font-size: 25px;
+    margin-left: 40px;
+}
+
+.section {
+    width: 90%;
+    /*margin-left: 5%;*/
+    /*background: #77d074;*/
 }
 
 .header, .footer {
     font-size: 20px;
-    margin-left: 40px;
+    margin-left: 80px;
 }
 
 .sectionTable {
@@ -33,4 +38,36 @@ tr.sectionRow {
 
 .itemName {
     padding-right: 20px;
+}
+
+th, td {
+    height: 45px;
+}
+
+th {
+    background: #5AAE57 !important;
+}
+
+tr:nth-child(odd) {
+    background: #61b65e;
+}
+
+tr:nth-child(even) {
+    background: #77d074;
+}
+
+td {
+    padding-left: 10px;
+}
+
+table {
+    width: 80%;
+    margin: 0 10%;
+    font-size: 15px;
+    border: 1px solid #3D7B3D;
+}
+
+table, th, td {
+    border-left: 1px solid #3D7B3D;
+    border-collapse: collapse;
 }
