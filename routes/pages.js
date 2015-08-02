@@ -2,20 +2,35 @@ var express = require('express');
 var xlsx = require('node-xlsx');
 var router = express.Router();
 
+
+var pages = [
+    ['Home', '/'],
+    //['Sweets Creator', '/creator'],
+    ['Cakes', '/cakes'],
+    ['Flavors', '/flavors'],
+    ['Pricing', '/pricing'],
+    //['Questions', '/questions'],
+    //['Facebook', "/"],
+    ['Contact Us', '/contact']
+];
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', {
             title: 'Sweet Events - In Development',
-            pages: [
-                ['Home', '/', true],
-                //['Sweets Creator', '/creator', false],
-                ['Cakes', '/cakes', false],
-                ['Flavors', '/flavors', false],
-                ['Pricing', '/pricing', false],
-                //['Questions', '/questions', false],
-                ['Facebook', "/", false],
-                ['Contact Us', '/contact', false]
-            ]
+            pages: pages,
+            active: 'Home'
+        }
+    )
+});
+
+router.get('/cakes', function (req, res, next) {
+    var flavors = xlsx.parse(__dirname + '/../public/flavors.xlsx'); // parses a file
+    //console.log(flavors[5]);
+    res.render('cakes', {
+            title: 'Pricing',
+            active: 'Pricing',
+            pages: pages
         }
     )
 });
@@ -24,19 +39,32 @@ router.get('/flavors', function (req, res, next) {
     var flavors = xlsx.parse(__dirname + '/../public/flavors.xlsx'); // parses a file
     //console.log(flavors[5]);
     res.render('flavors', {
-            title: 'Sweet Events - Flavors',
-            headder: "Flavors",
-            pages: [
-                ['Home', '/', false],
-                //['Sweets Creator', '/creator', false],
-                ['Cakes', '/cakes', false],
-                ['Flavors', '/flavors', true],
-                ['Pricing', '/pricing', false],
-                //['Questions', '/questions', false],
-                ['Facebook', "/", false],
-                ['Contact Us', '/contact', false]
-            ],
+            title: 'Flavors',
+            pages: pages,
+            active: 'Flavors',
             flavors: flavors
+        }
+    )
+});
+
+router.get('/contact', function (req, res, next) {
+    var flavors = xlsx.parse(__dirname + '/../public/flavors.xlsx'); // parses a file
+    //console.log(flavors[5]);
+    res.render('contact', {
+            title: 'Contact',
+            active: 'Contact Us',
+            pages: pages
+        }
+    )
+});
+
+router.get('/pricing', function (req, res, next) {
+    var flavors = xlsx.parse(__dirname + '/../public/flavors.xlsx'); // parses a file
+    //console.log(flavors[5]);
+    res.render('pricing', {
+            title: 'Pricing',
+            active: 'Pricing',
+            pages: pages
         }
     )
 });

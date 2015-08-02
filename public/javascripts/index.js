@@ -1,8 +1,5 @@
 $('#slideshow').children().hide();
 
-function make() {
-}
-
 $(window).load(function () {
     $.ajax({
         type: 'GET',
