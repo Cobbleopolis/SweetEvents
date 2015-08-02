@@ -3,7 +3,7 @@ block head
     link(rel='stylesheet', href='/stylesheets/contact.css')
     script(type='text/javascript', src='/javascripts/contact.js')
 block content
-    h1#title= title
+    //h1#title= title
     each val in contactUs
         -var size = val.data[0].length;
         if(contactUs.length > 1)

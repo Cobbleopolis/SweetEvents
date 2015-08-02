@@ -19,5 +19,6 @@ html
                             a.pageLink(href = page[1])
                                 div(id= active === page[0] ? "active" : "")= page[0]
             div#content
-                //p#title= headder ? headder : title
+                if active !== "Home"
+                    p#title=title
                 block content
