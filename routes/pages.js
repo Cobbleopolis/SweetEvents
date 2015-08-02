@@ -54,12 +54,15 @@ router.get('/pricing', function (req, res, next) {
 });
 
 router.get('/contact', function (req, res, next) {
+    var contactUs = xlsx.parse(__dirname + '/../public/contactUs.xlsx'); // parses a file
     res.render('contact', {
-            title: 'Contact',
+            title: 'Contact Us',
             active: 'Contact Us',
-            pages: pages
+            pages: pages,
+            contactUs: contactUs
         }
-    )
+    );
+    console.log(contactUs)
 });
 
 module.exports = router;

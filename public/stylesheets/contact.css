@@ -1,0 +1,41 @@
+#title {
+    margin: 30px 0 30px 70px;
+    font-size: 50px;
+}
+
+.tableName {
+    margin: 30px 0 20px 100px;
+    font-size: 30px;
+}
+
+table, th, td {
+    border-left: 1px solid #3D7B3D;
+    border-collapse: collapse;
+}
+
+th, td {
+    height: 45px;
+}
+
+th {
+    background: #5AAE57 !important;
+}
+
+tr:nth-child(odd) {
+    background: #61b65e;
+}
+
+tr:nth-child(even) {
+    background: #77d074;
+}
+
+td {
+    padding-left: 10px;
+}
+
+table {
+    width: 80%;
+    margin: 0 10%;
+    font-size: 15px;
+    border: 1px solid #3D7B3D;
+}

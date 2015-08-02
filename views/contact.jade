@@ -3,3 +3,19 @@ block head
     link(rel='stylesheet', href='/stylesheets/contact.css')
     script(type='text/javascript', src='/javascripts/contact.js')
 block content
+    h1#title= title
+    each val in contactUs
+        -var size = val.data[0].length;
+        if(contactUs.length > 1)
+            h2.tableName= val.name
+        table
+            each entry, row in val.data
+                tr
+                    if(row === 0)
+                        -for (var i = 0; i < size; i++) {
+                        th=entry[i] ? entry[i] : "N/A"
+                        -}
+                    else
+                        -for (var i = 0; i < size; i++) {
+                        td=entry[i] ? entry[i] : "N/A"
+                        -}
