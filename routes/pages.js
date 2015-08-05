@@ -27,8 +27,8 @@ router.get('/', function (req, res, next) {
 router.get('/cakes', function (req, res, next) {
     res.render('cakes', {
             title: 'Cakes',
-            active: 'Cakes',
-            pages: pages
+            pages: pages,
+            active: 'Cakes'
         }
     )
 });
