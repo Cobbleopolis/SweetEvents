@@ -7,15 +7,15 @@ block content
     each val in contactUs
         -var size = val.data[0].length;
         if(contactUs.length > 1)
-            p.tableName= val.name
+            p.tableName!= val.name
         table
             each entry, row in val.data
                 tr
                     if(row === 0)
                         -for (var i = 0; i < size; i++) {
-                            th=entry[i] ? entry[i] : "N/A"
+                            th!=entry[i] ? entry[i] : "N/A"
                         -}
                     else
                         -for (var i = 0; i < size; i++) {
-                            td=entry[i] ? entry[i] : "N/A"
+                            td!=entry[i] ? entry[i] : "N/A"
                         -}
