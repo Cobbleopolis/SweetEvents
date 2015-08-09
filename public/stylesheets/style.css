@@ -90,6 +90,22 @@ body {
     border-bottom: solid 1px #3d7b3d;
 }
 
+.sectionName {
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.sectionContent {
+    margin-left: 80px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
 /*p {*/
 /*font-size: 25px;*/
 /*}*/

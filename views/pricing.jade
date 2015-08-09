@@ -3,3 +3,9 @@ block head
     link(rel='stylesheet', href='/stylesheets/pricing.css')
     script(type='text/javascript', src='/javascripts/pricing.js')
 block content
+    each val in pricing
+        div.section
+            p.sectionName!= val.name
+            each entry in val.data
+                p.sectionContent!= entry
+    p.footer Still have questions? <a href="/contact">Contact Us</a>

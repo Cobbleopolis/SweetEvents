@@ -46,12 +46,14 @@ router.get('/flavors', function (req, res, next) {
 });
 
 router.get('/pricing', function (req, res, next) {
+    var pricing = xlsx.parse(__dirname + '/../public/pricing.xlsx'); // parses a file
     res.render('pricing', {
             title: 'Pricing',
             active: 'Pricing',
-            pages: pages
+            pages: pages,
+            pricing: pricing
         }
-    )
+    );
 });
 
 router.get('/contact', function (req, res, next) {
