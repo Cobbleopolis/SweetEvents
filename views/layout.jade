@@ -16,9 +16,9 @@ html
                 ul#nav
                     for page in pages
                         li
-                            a.pageLink(href = page[1])
-                                div(id= active === page[0] ? "active" : "")= page[0]
+                            a.pageLink(href!= page[1])
+                                div(id!= active === page[0] ? "active" : "")= page[0]
             div#content
                 if active !== "Home"
-                    p#title=title
+                    p#title!=title
                 block content
