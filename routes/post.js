@@ -26,7 +26,6 @@ app.use('/cakes/getAlbums', function (req, res) {
         entry[1] = fs.readdirSync(srcpath + "/" + albumLocs[i])[0];
         albums[i] = entry;
     }
-    console.log(albums);
     res.send(albums);
 });
 
