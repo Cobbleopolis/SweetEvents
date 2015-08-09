@@ -8,20 +8,20 @@ block content
     div#flavorNav
         ul
             each val in flavors
-                a(href="#" + val.name)
-                    li= val.name
+                a(href!="#" + val.name)
+                    li!= val.name
     div#display
         div#flavors
             each val in flavors
-                a(name=val.name)
+                a(name!=val.name)
                 div.section
-                    p.sectionName= val.name
-                    p.header= val.data[0][0]
+                    p.sectionName!= val.name
+                    p.header!= val.data[0][0]
                     table
                         -for(var i = 1; i < val.data.length; i++) {
                             tr
-                                td=val.data[i][0]
+                                td!=val.data[i][0]
                                 if(val.data[i][1])
-                                    td=val.data[i][1]
+                                    td!=val.data[i][1]
                         -}
-                    p.footer= val.data[0][1]
+                    p.footer!= val.data[0][1]
