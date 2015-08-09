@@ -1,14 +1,14 @@
-<!--
--
-Created by Logan on
+.album {
+    background: #76D464 !important;
+}
 
-8
-/
-2
-/
-2015
-.
+.aldumImageContainer {
+    width: 200px;
+    /*height: 200px;*/
+    margin-bottom: 25px;
+    overflow: hidden;
+}
 
--
--->
-
+.albumImage {
+    width: 100%;
+}
