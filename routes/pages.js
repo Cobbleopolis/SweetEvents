@@ -35,11 +35,17 @@ router.get('/cakes', function (req, res, next) {
 
 router.get('/flavors', function (req, res, next) {
     var flavors = xlsx.parse(__dirname + '/../public/flavors.xlsx'); // parses a file
+    var secondNav = {};
+    for (var i in flavors) {
+        secondNav[i] = flavors[i].name
+    }
+    console.log(secondNav);
     res.render('flavors', {
             title: 'Flavors',
             pages: pages,
             active: 'Flavors',
-            flavors: flavors
+            flavors: flavors,
+            secondNav: secondNav
         }
     );
     //console.log(flavors);

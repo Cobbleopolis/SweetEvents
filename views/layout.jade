@@ -9,6 +9,7 @@ html
         link(href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css')
 
         link(rel='stylesheet', href='/stylesheets/style.css')
+        script(type='text/javascript', src='/javascripts/layout.js')
         block head
     body
         div#page
@@ -21,4 +22,11 @@ html
             div#content
                 if active !== "Home"
                     p#title!=title
+                if secondNav
+                    div#secondNav
+                        ul
+                            each val in secondNav
+                                a(href!="#" + val)
+                                    li!= val
+                    div#display
                 block content

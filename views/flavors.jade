@@ -5,11 +5,11 @@ block head
     script(type='text/javascript', src='/javascripts/flavors.js')
 
 block content
-    div#flavorNav
-        ul
-            each val in flavors
-                a(href!="#" + val.name)
-                    li!= val.name
+    //div#secondNav
+    //    ul
+    //        each val in flavors
+    //            a(href!="#" + val.name)
+    //                li!= val.name
     div#display
         div#flavors
             each val in flavors
