@@ -1,6 +1,8 @@
 var express = require('express');
 var xlsx = require('node-xlsx');
 var router = express.Router();
+var fs = require('fs');
+var path = require('path');
 
 
 var pages = [
@@ -25,10 +27,15 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/cakes', function (req, res, next) {
+    var srcpath = __dirname + "/../public/images/gallery";
+    var albumLocs = fs.readdirSync(srcpath).filter(function (file) {
+        return (fs.statSync(path.join(srcpath, file)).isDirectory());
+    });
     res.render('cakes', {
             title: 'Cakes',
             pages: pages,
-            active: 'Cakes'
+            active: 'Cakes',
+            secondNav: albumLocs
         }
     )
 });
