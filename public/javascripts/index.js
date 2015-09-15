@@ -1,4 +1,4 @@
-$('#slideshow').children().hide();
+$('#slideshow').children().css({visibility: "hidden"});
 
 $(window).load(function () {
     $.ajax({
