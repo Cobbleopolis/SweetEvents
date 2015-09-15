@@ -25,8 +25,8 @@ function activateSlideshow() {
         var slideshow = $("#slideshow");
         slideshow.find("> div:gt(0)").hide();
         setInterval(function () {
-            slideshow.find('> div:first').fadeOut(animTime);
-            slideshow.find('> div:first').next().delay(animTime).fadeIn(animTime);
+            slideshow.find('> div:first').animate({opacity: 0}, animTime).css({visibility: "hidden"});
+            slideshow.find('> div:first').next().delay(slideDuration).animate({opacity: 0}, animTime).css({visibility: "visible"});
             slideshow.find('> div:first').appendTo("#slideshow");
         }, slideDuration);
     });
