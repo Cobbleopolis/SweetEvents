@@ -29,7 +29,7 @@
 }
 
 #slideshow_load {
-    display: none;
+    visibility: hidden;
 }
 
 .slideshow_img {
