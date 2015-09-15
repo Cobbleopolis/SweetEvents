@@ -9,7 +9,7 @@ $(window).load(function () {
         var html = '';
         var slideshow = $("#slideshow");
         for (var i in data) {
-            html += '<div class="slideshow_div" align="center"><img class="slideshow_img" src="images/home/slideshow/' + data[i] + '"></div>';
+            html += '<div class="slideshow_div" align="center"><img class="slideshow_img" src="http://static.sweeteventsjc.com/images/home/slideshow/' + data[i] + '"></div>';
         }
         slideshow.html(html);
         $('.slideshow_img').attr('height', slideshow.height() - 10);
