@@ -23,13 +23,17 @@ $.ajax({
 }).done(function (data) {
     console.log(data);
     var html = '';
-    var slideshow = $("#slideshow");
+    var slideshow = $("#slideshow_load");
     for (var i in data) {
         html += '<div class="slideshow_div" align="center"><img class="slideshow_img" src="http://static.sweeteventsjc.com/images/home/slideshow/' + data[i] + '"></div>';
     }
     slideshow.html(html);
     $('.slideshow_img').attr('height', slideshow.height() - 10);
     activateSlideshow();
+});
+
+$(".slideshow_div").onload(function () {
+    $("#slideshow").append($(this).outerHTML);
 });
 
 var animTime = 500;

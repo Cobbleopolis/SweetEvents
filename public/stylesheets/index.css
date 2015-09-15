@@ -28,6 +28,10 @@
     height: 304px;
 }
 
+#slideshow_load {
+    display: none;
+}
+
 .slideshow_img {
     margin: 5px 0;
 }
