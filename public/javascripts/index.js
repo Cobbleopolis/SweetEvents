@@ -1,20 +1,35 @@
 $('#slideshow').children().hide();
 
-$(window).load(function () {
-    $.ajax({
-        type: 'GET',
-        url: '/post/index/getSlideshow'
-    }).done(function (data) {
-        console.log(data);
-        var html = '';
-        var slideshow = $("#slideshow");
-        for (var i in data) {
-            html += '<div class="slideshow_div" align="center"><img class="slideshow_img" src="http://static.sweeteventsjc.com/images/home/slideshow/' + data[i] + '"></div>';
-        }
-        slideshow.html(html);
-        $('.slideshow_img').attr('height', slideshow.height() - 10);
-        activateSlideshow();
-    });
+//$(window).load(function () {
+//    $.ajax({
+//        type: 'GET',
+//        url: '/post/index/getSlideshow'
+//    }).done(function (data) {
+//        console.log(data);
+//        var html = '';
+//        var slideshow = $("#slideshow");
+//        for (var i in data) {
+//            html += '<div class="slideshow_div" align="center"><img class="slideshow_img" src="http://static.sweeteventsjc.com/images/home/slideshow/' + data[i] + '"></div>';
+//        }
+//        slideshow.html(html);
+//        $('.slideshow_img').attr('height', slideshow.height() - 10);
+//        activateSlideshow();
+//    });
+//});
+
+$.ajax({
+    type: 'GET',
+    url: '/post/index/getSlideshow'
+}).done(function (data) {
+    console.log(data);
+    var html = '';
+    var slideshow = $("#slideshow");
+    for (var i in data) {
+        html += '<div class="slideshow_div" align="center"><img class="slideshow_img" src="http://static.sweeteventsjc.com/images/home/slideshow/' + data[i] + '"></div>';
+    }
+    slideshow.html(html);
+    $('.slideshow_img').attr('height', slideshow.height() - 10);
+    activateSlideshow();
 });
 
 var animTime = 500;
