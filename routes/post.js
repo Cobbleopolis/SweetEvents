@@ -29,6 +29,9 @@ app.use('/cakes/getAlbums', function (req, res) {
     res.send(albums);
 });
 
-
+app.use ('/gallery/getAlbum/:album', function(req, res) {
+    //TODO Implement
+    res.send(req.params.album);
+});
 
 module.exports = app;
