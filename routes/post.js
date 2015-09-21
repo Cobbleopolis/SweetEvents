@@ -9,24 +9,11 @@ app.use('/test', function (req, res) {
 });
 
 app.use('/index/getSlideshow', function (req, res) {
-    var srcpath = __dirname + "/../public/images/home/slideshow";
-    var albumLocs = fs.readdirSync(srcpath).filter(function(file) {return!(fs.statSync(path.join(srcpath, file)).isDirectory());});
-    var images = {};
-    for (var i in albumLocs) {
-        var entry = [];
-        entry[0] = albumLocs[i];
-        entry[1] = fs.readdirSync(srcpath + "/" + albumLocs[i])[0];
-        images[i] = entry;
-    }
-
-    res.send(images);
-
-    //res.send(albums);
-    //fs.readdir(__dirname + '/../public/images/home/slideshow', function (err, files) {
-    //    if (err)
-    //        throw err;
-    //    res.send(files);
-    //})
+    fs.readdir(__dirname + '/../public/images/home/slideshow', function (err, files) {
+        if (err)
+            throw err;
+        res.send(files);
+    })
 });
 
 app.use('/cakes/getAlbums', function (req, res) {
