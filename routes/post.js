@@ -13,7 +13,7 @@ app.use('/index/getSlideshow', function (req, res) {
         if (err)
             throw err;
         res.send(files);
-    })
+    });
 });
 
 app.use('/cakes/getAlbums', function (req, res) {
@@ -30,8 +30,12 @@ app.use('/cakes/getAlbums', function (req, res) {
 });
 
 app.use ('/gallery/getAlbum/:album', function(req, res) {
-    //TODO Implement
-    res.send(req.params.album);
+    fs.readdir(__dirname + '/../public/images/gallery/' + req.params.album, function (err, files) {
+        if (err)
+            throw err;
+        res.send(files);
+    });
+    //res.send(req.params.album);
 });
 
 module.exports = app;
