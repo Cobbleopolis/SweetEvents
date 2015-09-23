@@ -31,10 +31,10 @@ router.get('/cakes', function (req, res, next) {
     var albumLocs = fs.readdirSync(srcpath).filter(function (file) {
         return (fs.statSync(path.join(srcpath, file)).isDirectory());
     });
-    res.render('cakes', {
-            title: 'Cakes',
+    res.render('gallery', {
+            title: 'Cake Gallery',
             pages: pages,
-            active: 'Cakes',
+            active: 'Cakes Gallery',
             secondNav: albumLocs
         }
     )

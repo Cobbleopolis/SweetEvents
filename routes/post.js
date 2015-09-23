@@ -16,25 +16,22 @@ app.use('/index/getSlideshow', function (req, res) {
     });
 });
 
-app.use('/cakes/getAlbums', function (req, res) {
+app.use('/gallery/getAlbums', function (req, res) {
     var srcpath = __dirname + "/../public/images/gallery";
-    var albumLocs = fs.readdirSync(srcpath).filter(function(file) {return(fs.statSync(path.join(srcpath, file)).isDirectory());});
-    var albums = {};
-    for (var i in albumLocs) {
-        var entry = [];
-        entry[0] = albumLocs[i];
-        entry[1] = fs.readdirSync(srcpath + "/" + albumLocs[i])[0];
-        albums[i] = entry;
-    }
+    var albums = fs.readdirSync(srcpath).filter(function (file) {
+        return (fs.statSync(path.join(srcpath, file)).isDirectory());
+    });
     res.send(albums);
 });
 
 app.use ('/gallery/getAlbum/:album', function(req, res) {
-    fs.readdir(__dirname + '/../public/images/gallery/' + req.params.album, function (err, files) {
-        if (err)
-            throw err;
-        res.send(files);
-    });
+    var srcPath = __dirname + '/../public/images/gallery/';
+    if (fs.existsSync(srcPath))
+        fs.readdir(__dirname + '/../public/images/gallery/' + req.params.album, function (err, files) {
+            if (err)
+                throw err;
+            res.send(files);
+        });
     //res.send(req.params.album);
 });
 
