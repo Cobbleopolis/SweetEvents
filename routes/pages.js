@@ -34,7 +34,7 @@ router.get('/cakes', function (req, res, next) {
     res.render('gallery', {
             title: 'Cake Gallery',
             pages: pages,
-            active: 'Cakes Gallery',
+            active: 'Cakes',
             secondNav: albumLocs
         }
     )
