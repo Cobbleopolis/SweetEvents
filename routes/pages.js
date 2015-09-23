@@ -19,7 +19,7 @@ var pages = [
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', {
-            title: 'Sweet Events',
+            title: 'Sweet Events - TEST',
             pages: pages,
             active: 'Home'
         }
