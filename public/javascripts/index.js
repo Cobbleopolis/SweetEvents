@@ -30,5 +30,5 @@ function activateSlideshow() {
             slideshow.find('> div:first').appendTo("#slideshow").delay(slideDuration);
         }, slideDuration);
     });
-
+    console.log("Slideshow Made");
 }
