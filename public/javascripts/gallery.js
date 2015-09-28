@@ -1,4 +1,5 @@
-var album = null;
+var currentAlbum = null;
+var albumImages = null;
 
 $(window).load(function() {
     //$.ajax({
@@ -16,19 +17,33 @@ $(window).load(function() {
     //    //$('#content').append(html);
     //});
     $(".secondNavListItem").on("click", function() {  //use a class, since your ID gets mangled
-        getAlbumsImages($(this)[0].innerHTML);
+        getAlbumsImages($(this)[0].innerHTML, function(){
+            var loadingDiv = $("#loadingDiv");
+            loadingDiv.empty();
+            var html = "";
+            for(var image in albumImages) {
+                html += '<img class="loadingImage" src="//static.sweeteventsjc.com/images/gallery/' + currentAlbum + '/' + albumImages[image] + '">'
+            }
+            loadingDiv.append(html);
+        });
+
+    });
+    $(".loadingImage").on("load", function() {  //use a class, since your ID gets mangled
+        console.log($(this));
+        //$("#viewDiv").append($(this))
     });
 
 });
 
-function getAlbumsImages(album) {
+function getAlbumsImages(album, callback) {
     $.ajax({
         type: 'GET',
         url: '/post/gallery/getAlbum/' + album
     }).done(function (data) {
-        album = data;
-        console.log(data);
-        //console.log(data);
+        currentAlbum = album;
+        albumImages = data;
+        callback();
+        console.log("Got album Images");
         //var html = '';
         //for (var i in data) {
         //    var album = data[i];

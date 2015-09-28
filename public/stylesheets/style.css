@@ -154,6 +154,21 @@ a {
     top: 0;
 }
 
+#loadingDiv {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.loadingImage {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+}
 /*p {*/
 /*font-size: 25px;*/
 /*}*/
