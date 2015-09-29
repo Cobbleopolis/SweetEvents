@@ -39,6 +39,9 @@ $(window).load(function() {
             //    thing = image;
             //    //console.log(thing);
             //});
+            $(".galleryImage").on("click", function(e) {
+                var image = $($(this)[0]);
+            });
         });
 
     });
