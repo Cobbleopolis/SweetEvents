@@ -18,7 +18,7 @@ $(window).load(function() {
     //});
     $(".secondNavListItem").on("click", function() {  //use a class, since your ID gets mangled
         getAlbumsImages($(this)[0].innerHTML, function(){
-            var loadingDiv = $("#loadingDiv");
+            var loadingDiv = $("#viewDiv");
             loadingDiv.empty();
             var html = "";
             albumImages.forEach(function (element) { html += '<img class="loadingImage" src="//static.sweeteventsjc.com/images/gallery/' + currentAlbum + '/' + element + '">'});
