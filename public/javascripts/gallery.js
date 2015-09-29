@@ -26,7 +26,7 @@ $(window).load(function() {
         });
 
     });
-    $(".loadingImage").on("load", function() {  //use a class, since your ID gets mangled
+    $(".loadingImage").bind("load", function() {  //use a class, since your ID gets mangled
         console.log($(this));
         //$("#viewDiv").append($(this))
     });
