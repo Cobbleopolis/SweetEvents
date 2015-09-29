@@ -21,9 +21,7 @@ $(window).load(function() {
             var loadingDiv = $("#loadingDiv");
             loadingDiv.empty();
             var html = "";
-            for(var image in albumImages) {
-                html += '<img class="loadingImage" src="//static.sweeteventsjc.com/images/gallery/' + currentAlbum + '/' + albumImages[image] + '">'
-            }
+            albumImages.forEach(function (element) { html += '<img class="loadingImage" src="//static.sweeteventsjc.com/images/gallery/' + currentAlbum + '/' + element + '">'});
             loadingDiv.append(html);
         });
 
